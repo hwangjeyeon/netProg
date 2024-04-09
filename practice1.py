@@ -1,5 +1,8 @@
-word = input("Your Word: ")
+sum = 0
 
-finds = word.find("a")
-print(word[:finds+1])
-print(word[finds+1:])
+for i in range(1, 1001):
+    
+    for s in str(i):
+        sum += int(s)
+
+print(sum)
