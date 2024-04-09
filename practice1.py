@@ -1,27 +1,23 @@
-days = {'January':31, 'February':28, 'March':31, 'April':30,
-'May':31, 'June':30, 'July':31, 'August':31,
-'September':30, 'October':31, 'November':30,
-'December':31}
+d = [{'name':'Todd','phone': '555-1414', 'email' : 'todd@mail.net'},
+     {'name' : 'Helga', 'phone': '555-1618', 'email':'helga@mail.net'},
+     {'name':'princess','phone':'555-3141', 'email' : ''},
+     {'name':'LJ','phone':'555-2718','email':'lj@mail.net'}
+     ]
+for i in d:
+    if i['phone'].endswith('8'):
+        print(i['name'])
 
-month = input("월을 입력하세요")
-if month in days:
-    print(days[month])
-else:
-    print("해당하는 월이 없습니다")
+for i in d:
+    if not i['email']:
+        print(i['name'])
 
-for i in sorted(days.keys()):
-    print(i)
-
-print()
-for i, j in days.items():
-    if j == 31:
-        print(i)
-print()
-for i, j in sorted(days.items(), key=lambda x: x[1]):
-    print(i, j)
-
-month = input("월을 3자리만 입력하세요")
-for i, j in days.items():
-    if i.startswith(month):
-        print(j)
-
+name = input("이름을 입력하세요")
+isFind = False
+for i in d:
+    if i['name'] == name:
+        print(i['phone'])
+        print(i['email'])
+        isFind = True
+        break
+if not isFind:
+    print("이름이 없습니다.")
