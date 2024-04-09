@@ -1,15 +1,14 @@
-from random import randint
-player = 50
-while player > 0 and player < 100:
-    coin = randint(1,2)
-    choose = randint(1,2)
+a = int(input("첫번째 수를 입력하세요: "))
+b = int(input("두번째 수를 입력하세요: "))
 
-    if(coin == choose):
-        player += 10
-    else:
-        player -= 9
+if(a < b):
+    tmp = a
+    a = b
+    b = tmp
 
-if player <= 0:
-    print("player lose")
-else:
-    print("player win")
+while b!=0:
+    n = a%b
+    a = b
+    b = n
+
+print(a)
