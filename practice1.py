@@ -1,14 +1,15 @@
-list = [1,2,3]
-print(list)
-list[1] = 17
-print(list)
-list.extend([4,5,6])
-print(list)
-list.pop(0)
-print(list)
-list.sort()
-print(list)
-list.reverse()
-print(list)
-list[3] = 25
-print(list)
+from random import randint
+player = 50
+while player > 0 and player < 100:
+    coin = randint(1,2)
+    choose = randint(1,2)
+
+    if(coin == choose):
+        player += 10
+    else:
+        player -= 9
+
+if player <= 0:
+    print("player lose")
+else:
+    print("player win")
