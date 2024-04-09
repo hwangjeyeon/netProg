@@ -1,8 +1,8 @@
-sum = 0
-
-for i in range(1, 1001):
-    
-    for s in str(i):
-        sum += int(s)
-
-print(sum)
+list = ["hwang", "yoo", "kwon"]
+print(list)
+list.insert(0, "kim")
+print(list)
+list.insert(2, "hong")
+print(list)
+list.append("yun")
+print(list)
